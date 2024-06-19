@@ -1,0 +1,4 @@
+langchain 
+langchain_experimental 
+langchain_openai 
+tenacity==8.3.0
