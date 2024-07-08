@@ -21,7 +21,7 @@ function page({ params }: { params: { page: string } }) {
     }
   };
 
-  const id = bookid + '-' + pagenum;
+  const pageid = bookid + '-' + pagenum;
   
 
   const handlePrevPage = () => {
@@ -53,8 +53,8 @@ function page({ params }: { params: { page: string } }) {
     </div>
 
     <div className="flex flex-col h-screen overflow-hidden">
-      <Chat chatId={id}/>
-      <ChatInput chatId={id}/>
+      <Chat chatId={pageid}/>
+      <ChatInput chatId={pageid}/>
     </div>
     </div>
   )

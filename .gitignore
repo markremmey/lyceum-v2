@@ -38,3 +38,8 @@ next-env.d.ts
 
 #Python
 .venv
+
+
+serviceAccountKey.json
+firebase.ts
+firebaseAdmin.ts
