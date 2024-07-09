@@ -1,19 +1,30 @@
+'use client';
 import React from 'react';
-// import BookList from '../src/components/BookList';
-import Link from 'next/link'
-import { books } from '../src/data/books';
+import Link from 'next/link';
+import { useSession } from 'next-auth/react';
+
 
 export default function Home() {
+  const { data: session, status } = useSession();
+  
+
+  // Check if session is defined
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  if (!session) {
+    return <div>Please log in to see the books.</div>;
+  }
+  // const userId = session.user?.id;
+
+  
   return (
+    <>
     <div>
-      <h1>Books</h1>
-      <ul>
-        {books.map((book) => (
-          <li key={book.id}>
-            <Link href={`/books/${book.id}/1`}>{book.title}</Link>
-          </li>
-        ))}
-      </ul>
+      This is the Landing Page
     </div>
+    <Link href={`${session.user?.id}/books`}>"Go to Books"</Link>
+    </>
   );
 }

@@ -6,6 +6,7 @@ import { SessionProvider } from "../src/components/SessionProvider";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import Login from "@/src/components/Login";
 import ClientProvider from "@/src/components/ClientProvider";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
