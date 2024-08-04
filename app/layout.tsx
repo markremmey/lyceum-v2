@@ -25,8 +25,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body >
-        <header>Header content</header>
+      <body className="bg-white">
         <SessionProvider session={session}>
           {!session ? (
             <Login />
@@ -38,7 +37,6 @@ export default async function RootLayout({
           )}
 
         </SessionProvider>
-        <footer>Footer content</footer>
       </body>
     </html>
   );

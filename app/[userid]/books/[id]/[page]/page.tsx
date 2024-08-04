@@ -11,17 +11,21 @@ function page({ params }: { params: { userid: string; id: string; page: string }
   const pageid = params.id + '-' + pagenum;
 
   return (
-    <div>
-      <BookContent
-        userId={params.userid}
-        bookId={params.id}
-        pagenum={pagenum}
-      />
-      <div className="flex flex-col h-screen overflow-hidden">
+    <div className="h-screen flex flex-col">
+      <div className="h-1/2">
+        <BookContent
+          userId={params.userid}
+          bookId={params.id}
+          pagenum={pagenum}
+        />
+      </div>
+      <div className="h-1/2 flex flex-col">
         <Chat chatId={pageid} />
         <ChatInput chatId={pageid} />
       </div>
+
     </div>
+
   );
 }
 

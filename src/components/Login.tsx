@@ -8,18 +8,22 @@ import  Image from 'next/image';
 
 function Login() {
   return (
-    <div className="bg-[#11A37F] h-screen flex flex-col items-center justify-center text-center">
-    <Image
-      src="https://links.papareact.com/2i6"
-      width={300}
-      height={300}
-      alt="logo"
-    />
+    <div className="h-screen flex flex-col items-center justify-center bg-white">
+      <div className="flex items-center justify-center mb-12">
+        <Image
+          src="/images/Aristotle.png"
+          width={300}
+          height={300}
+          alt="logo"
+        />
+      </div>
     <button 
       onClick={() => signIn('google')} 
-      className="font-bold animate-pulse">Sign in to use ChatGPT</button>
-    </div>
-  )
+      className="font-bold animate-pulse">
+        Sign in to use Lyceum
+    </button>
+  </div>
+)
 }
 
 export default Login

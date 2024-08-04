@@ -62,6 +62,8 @@ function ChatInput({ chatId }: Props) {
       }
     };
 
+    console.log(chatId)
+
     await addDoc(
       collection(
         db,

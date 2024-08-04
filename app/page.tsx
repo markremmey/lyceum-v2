@@ -20,11 +20,13 @@ export default function Home() {
 
   
   return (
-    <>
-    <div>
-      This is the Landing Page
+    <div className="bg-white flex flex-col items-center justify-center h-screen px-2">
+      <h1 className="text-5xl font-bold mb-20"> Lyceum </h1>
+      
+      <div className="space-y-2">
+        <Link href={`${session.user?.id}/books`}>Go to Books</Link>
+      </div>
+      
     </div>
-    <Link href={`${session.user?.id}/books`}>"Go to Books"</Link>
-    </>
   );
 }

@@ -30,7 +30,7 @@ function BookContent({ userId, bookId, pagenum }: BookContentProps) {
 
   return (
     <div>
-      <div className="flex items-center h-screen">
+      <div className="flex items-center overflow-hidden">
         <button
           onClick={handlePrevPage}
           disabled={pagenum <= 1}
@@ -38,7 +38,7 @@ function BookContent({ userId, bookId, pagenum }: BookContentProps) {
         >
           Previous
         </button>
-        <div className="flex-grow mx-10">
+        <div className="flex-grow text-white-500">
           <p>{pagecontent}</p>
         </div>
         <button
